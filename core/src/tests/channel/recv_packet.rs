@@ -74,7 +74,7 @@ mod tests {
 
     let client_height = host_height.increment();
 
-    System::set_block_number(client_height.revision_height() as u32);
+    System::set_block_number(client_height.revision_height());
 
     let msg = MsgRecvPacket::try_from(get_dummy_raw_msg_recv_packet(
         client_height.revision_height(),

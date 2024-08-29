@@ -82,7 +82,7 @@ mod tests {
      // Parametrize the host chain to have a height at least as recent as the
      // the height of the proofs in the Ack msg.
      let latest_height = proof_height.increment();
-     System::set_block_number(latest_height.revision_height() as u32);
+     System::set_block_number(latest_height.revision_height());
 
      let _max_history_size = 5;
      let default_context = Context::<PalletIbcTest>::new();
